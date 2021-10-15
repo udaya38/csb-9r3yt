@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+  </head>
+  <body>
+    <div class="timer-popup">
+      <p>Set Timer</p>
+      <div>
+        <select name="" id="hours">
+          <option value="00">00</option>
+          <option value="01">01</option>
+          <option value="02">02</option>
+          <option value="03">03</option>
+        </select>
+        <span>:</span>
+        <select name="" id="minutes"> </select>
+        <span>:</span>
+        <select name="" id="seconds"></select>
+      </div>
+      <button class="time-limit" onclick="setTime()">Set Time Limit</button>
+    </div>
+    <div class="instructions-container">
+      <div class="instruction-text">
+        <h1>Instructions:</h1>
+      </div>
+      <div class="instruction-order">
+        <ul>
+          <li>The test contains 25 questions and there is no time limit.</li>
+          <li>
+            If you want time Limit for the Quiz You can set by clicking timer.
+          </li>
+          <li>
+            If you want to see all questions at a time, Select show all
+            questions at a time Option in Question Type.
+          </li>
+          <li>
+            If you want to see questions one by one, Select show Questions one
+            by one Option in Question Type.
+          </li>
+          <li>Select any one of the correct answers from the given options.</li>
+          <li>You will get points on the basis of your correct answer.</li>
+          <li>You can review all the answers at the end of this quiz.</li>
+          <li>The Name you enter below will appear on your certificate.</li>
+          <li>
+            To start, click the "Start Quiz" button. When finished, click the
+            "Submit" button.
+          </li>
+          <li>Click here to Play Demo Video.</li>
+        </ul>
+      </div>
+      <div class="instructions-form-container">
+        <form action="" class="instructions-form">
+          <div class="form1-title">
+            10ஆம் வகுப்பு தமிழ் இயல் – 1 Online Test
+          </div>
+          <div class="form1-name">
+            <i class="fa fa-user" aria-hidden="true"></i>
+            <input type="text" placeholder="Enter Your Name…" id="nameCurr" />
+          </div>
+          <div class="form1-timer">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="time-text">Timer (optional)</span>
+            <label class="switch">
+              <input type="checkbox" id="togBtn" class="timer-btn" />
+              <div class="slider round"></div>
+            </label>
+          </div>
+          <div class="quiz-type">
+            <form action="">
+              <p>Question Type</p>
+              <div class="quiz-options">
+                <input id="option1" type="radio" value="option1" />
+                <label for="option1">Show Questions one by one</label>
+                <br /><br />
+                <input id="option2" type="radio" value="option2" />
+                <label for="option2">Show all Questions at a Time</label>
+              </div>
+            </form>
+          </div>
+          <div>
+            <p class="alert">*Please enter the required fields</p>
+          </div>
+          <button class="quiz-start" onclick="setQuiz()">Start Quiz</button>
+        </form>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
