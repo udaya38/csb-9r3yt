@@ -24,12 +24,12 @@ cancel.addEventListener("click", () => {
 //remove the error Alert
 function seeAlert() {
   let namecur = document.getElementById("nameCurr").value;
+  console.log(namecur);
   let option1 = document.getElementById("option1").checked;
   let option2 = document.getElementById("option2").checked;
-  if (
-    (namecur !== "" || namecur !== null) &&
-    (option1 === true || option2 === true)
-  ) {
+
+  if (namecur !== "" && (option1 === true || option2 === true)) {
+    console.log(option1, option2, namecur);
     document.querySelector(".alert").style.display = "none";
   }
 }
