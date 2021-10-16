@@ -63,6 +63,7 @@ body {
 }
 
 .time-limit {
+  cursor: pointer;
   padding: 5px;
   color: white;
   font-size: 20px;
@@ -167,6 +168,7 @@ input:focus {
 }
 
 .quiz-start {
+  cursor: pointer;
   padding: 10px;
   color: white;
   font-size: 25px;
@@ -310,8 +312,12 @@ input:checked + .slider:before {
 .time-text {
   margin-right: 30px;
 }
+.timer-popup select {
+  cursor: pointer;
+}
 
 .cancel {
+  cursor: pointer;
   border: none;
   background: none;
   float: right;
