@@ -29,6 +29,11 @@ body {
 .btn-sound {
   display: none;
 }
+.timer-alert {
+  display: none;
+  color: red;
+  font-weight: bold;
+}
 .timer-popup {
   display: none;
   position: absolute;

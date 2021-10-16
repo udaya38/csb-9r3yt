@@ -2,6 +2,7 @@ let btn_timer = document.querySelector(".timer-btn");
 let time_text = document.querySelector(".time-text");
 let cancel = document.querySelector(".cancel");
 
+//timer toggle event
 btn_timer.addEventListener("click", () => {
   if (btn_timer.checked) {
     document.querySelector(".timer-popup").style.display = "block";
@@ -11,16 +12,16 @@ btn_timer.addEventListener("click", () => {
     document.querySelector(".backdrop").style.display = "none";
     time_text.innerHTML = "Timer (optional)";
   }
-  // console.log(btn_timer.checked);
 });
 
+//timer popup close event
 cancel.addEventListener("click", () => {
   document.querySelector(".timer-popup").style.display = "none";
   document.querySelector(".backdrop").style.display = "none";
   btn_timer.checked = false;
 });
 
-//remove Alert
+//remove the error Alert
 function seeAlert() {
   let namecur = document.getElementById("nameCurr").value;
   let option1 = document.getElementById("option1").checked;
@@ -32,7 +33,7 @@ function seeAlert() {
     document.querySelector(".alert").style.display = "none";
   }
 }
-//Submit quiz
+//Submit quiz event
 function setQuiz() {
   document.querySelector(".btn-sound").play();
   let namecur = document.getElementById("nameCurr").value;
@@ -49,13 +50,18 @@ function setQuiz() {
   }
 }
 
-//btn-sound
-
-//Timer
+//Timer setting event
 function setTime() {
   let hours = document.getElementById("hours").value;
   let minutes = document.getElementById("minutes").value;
   let seconds = document.getElementById("seconds").value;
+  if (minutes === "00") {
+    document.querySelector(".timer-alert").style.display = "block";
+    return;
+  } else if (hours === "03" && (minutes !== "00" || seconds !== "00")) {
+    document.querySelector(".timer-alert").style.display = "block";
+    return;
+  }
   time_text.innerHTML =
     "Timer(" + hours + "h-" + minutes + "m-" + seconds + "s)";
   document.getElementById("hours").value = "00";
@@ -63,12 +69,12 @@ function setTime() {
   document.getElementById("minutes").value = "00";
 
   document.getElementById("seconds").value = "00";
-
-  // document.getElementById("minutes").value("00").selected = true;
   document.querySelector(".timer-popup").style.display = "none";
   document.querySelector(".backdrop").style.display = "none";
+  document.querySelector(".timer-alert").style.display = "none";
 }
 
+//minutes and seconds dropdown logic
 function loaddropdown() {
   var dropdown = document.getElementById("minutes");
   var dropdown1 = document.getElementById("seconds");

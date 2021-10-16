@@ -11,7 +11,7 @@
   </head>
   <body>
     <div class="backdrop"></div>
-    <i class="fa-solid fa-xmark"></i>
+    <!-- Timer popup open -->
     <div class="timer-popup">
       <p class="cancel"><i class="fa fa-close"></i></p>
       <p>Set Timer</p>
@@ -28,8 +28,15 @@
         <select name="" id="seconds"></select>
         <span>s</span>
       </div>
+      <div class="timer-alert">
+        <div>
+          *Mininum time 1 min <br />
+          *Maximum time 3 min
+        </div>
+      </div>
       <button class="time-limit" onclick="setTime()">Set Time Limit</button>
     </div>
+    <!-- Instructions and Form container code -->
     <div class="instructions-container">
       <div class="instruction-text">
         <h1>Instructions:</h1>
