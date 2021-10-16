@@ -4,11 +4,27 @@ let time_text = document.querySelector(".time-text");
 btn_timer.addEventListener("click", () => {
   if (btn_timer.checked) {
     document.querySelector(".timer-popup").style.display = "block";
+    document.querySelector(".backdrop").style.display = "block";
   } else {
     document.querySelector(".timer-popup").style.display = "none";
+    document.querySelector(".backdrop").style.display = "none";
+    time_text.innerHTML = "Timer (optional)";
   }
   // console.log(btn_timer.checked);
 });
+
+//remove Alert
+function seeAlert() {
+  let namecur = document.getElementById("nameCurr").value;
+  let option1 = document.getElementById("option1").checked;
+  let option2 = document.getElementById("option2").checked;
+  if (
+    (namecur !== "" || namecur !== null) &&
+    (option1 === true || option2 === true)
+  ) {
+    document.querySelector(".alert").style.display = "none";
+  }
+}
 //Submit quiz
 function setQuiz() {
   let namecur = document.getElementById("nameCurr").value;
@@ -32,6 +48,7 @@ function setTime() {
   time_text.innerHTML =
     "Timer(" + hours + "h-" + minutes + "m-" + seconds + "s)";
   document.querySelector(".timer-popup").style.display = "none";
+  document.querySelector(".backdrop").style.display = "none";
 }
 
 function loaddropdown() {

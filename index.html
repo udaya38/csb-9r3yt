@@ -10,6 +10,7 @@
     />
   </head>
   <body>
+    <div class="backdrop"></div>
     <div class="timer-popup">
       <p>Set Timer</p>
       <div>
@@ -62,7 +63,12 @@
           </div>
           <div class="form1-name">
             <i class="fa fa-user" aria-hidden="true"></i>
-            <input type="text" placeholder="Enter Your Name…" id="nameCurr" />
+            <input
+              type="text"
+              placeholder="Enter Your Name…"
+              id="nameCurr"
+              onchange="seeAlert()"
+            />
           </div>
           <div class="form1-timer">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
@@ -76,10 +82,22 @@
             <form action="">
               <p>Question Type</p>
               <div class="quiz-options">
-                <input id="option1" type="radio" value="option1" />
+                <input
+                  id="option1"
+                  type="radio"
+                  name="checkValue"
+                  value="option1"
+                  onchange="seeAlert()"
+                />
                 <label for="option1">Show Questions one by one</label>
                 <br /><br />
-                <input id="option2" type="radio" value="option2" />
+                <input
+                  id="option2"
+                  type="radio"
+                  name="checkValue"
+                  value="option2"
+                  onchange="seeAlert()"
+                />
                 <label for="option2">Show all Questions at a Time</label>
               </div>
             </form>
