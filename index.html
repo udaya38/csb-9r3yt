@@ -11,7 +11,9 @@
   </head>
   <body>
     <div class="backdrop"></div>
+    <i class="fa-solid fa-xmark"></i>
     <div class="timer-popup">
+      <p class="cancel"><i class="fa fa-close"></i></p>
       <p>Set Timer</p>
       <div>
         <select name="" id="hours">
@@ -20,10 +22,11 @@
           <option value="02">02</option>
           <option value="03">03</option>
         </select>
-        <span>:</span>
+        <span>h:</span>
         <select name="" id="minutes"> </select>
-        <span>:</span>
+        <span>m:</span>
         <select name="" id="seconds"></select>
+        <span>s</span>
       </div>
       <button class="time-limit" onclick="setTime()">Set Time Limit</button>
     </div>
@@ -82,7 +85,29 @@
             <form action="">
               <p>Question Type</p>
               <div class="quiz-options">
-                <input
+                <label class="container"
+                  >Show Questions one by one
+                  <input
+                    id="option1"
+                    type="radio"
+                    name="checkValue"
+                    value="option1"
+                    onchange="seeAlert()"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <label class="container"
+                  >Show all Questions at a Time
+                  <input
+                    id="option2"
+                    type="radio"
+                    name="checkValue"
+                    value="option2"
+                    onchange="seeAlert()"
+                  />
+                  <span class="checkmark"></span>
+                </label>
+                <!-- <input
                   id="option1"
                   type="radio"
                   name="checkValue"
@@ -98,7 +123,7 @@
                   value="option2"
                   onchange="seeAlert()"
                 />
-                <label for="option2">Show all Questions at a Time</label>
+                <label for="option2">Show all Questions at a Time</label> -->
               </div>
             </form>
           </div>
