@@ -34,6 +34,7 @@ function seeAlert() {
 }
 //Submit quiz
 function setQuiz() {
+  document.querySelector(".btn-sound").play();
   let namecur = document.getElementById("nameCurr").value;
   let option1 = document.getElementById("option1").checked;
   let option2 = document.getElementById("option2").checked;
@@ -47,6 +48,9 @@ function setQuiz() {
     return;
   }
 }
+
+//btn-sound
+
 //Timer
 function setTime() {
   let hours = document.getElementById("hours").value;
