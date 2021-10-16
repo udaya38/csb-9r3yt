@@ -55,6 +55,7 @@ body {
   background: rgb(9, 185, 9);
 }
 .instructions-container {
+  background: #ffffff !important;
   position: relative;
   width: 70%;
   margin: auto;
@@ -69,23 +70,23 @@ body {
 .instruction-order {
   padding: 10px;
 }
-li {
+.instruction-order li {
   list-style-type: none;
   position: relative;
-  color: red;
+  color: red !important;
   font-weight: bold;
   line-height: 20px; /* It's needed for setting position to absolute in the next rule. */
 }
 
 .instruction-order li::before {
   content: "\2714";
-  color: red;
+  color: red !important;
   position: absolute;
   left: -30px; /* Adjust this value so that it appears where you want. */
   font-size: 13px; /* Adjust this value so that it appears what size you want. */
 }
 .instruction-order li {
-  margin-bottom: 5px;
+  margin-bottom: 5px !important;
 }
 .instructions-form {
   width: 70%;
